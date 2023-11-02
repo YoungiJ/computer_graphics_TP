@@ -4,7 +4,7 @@ function goToFadePage() {
   window.location.href = 'fade.html';
 }
 window.addEventListener('load', function() {
-  wholeTime = 10; // 타이머를 30초로 설정
+  wholeTime =30; // 타이머를 30초로 설정
   update(wholeTime, wholeTime); // 타이머 그래픽 업데이트
   displayTimeLeft(wholeTime);
   timer(wholeTime); // 타이머 시작

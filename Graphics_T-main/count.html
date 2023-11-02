@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        #count {
+            font-size: 36px;
+            color: #ebe4c6;
+        }
+
+       #incrementButton {
+    background-color: #ebe4c6;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none; /* 테두리(border)를 없애는 스타일 */
+    cursor: pointer;
+}
+
+#incrementButton:hover {
+    background-color: #ebe4c6;
+}
+
+
+       
+    </style>
+</head>
+<body>
+    <h2 id="count"></h2>
+    <button id="incrementButton">Increase Count</button>
+  
+
+    <script>
+        let countBox = document.querySelector('#count');
+        let count = 0;
+
+        function incrementCount() {
+            if (count < 5) { // 상한값이 5인 경우
+                count += 1;
+                const formattedCount = `${count}/5`;
+                countBox.innerHTML = formattedCount;
+            } else {
+                alert('상한값에 도달했습니다. 더 이상 증가할 수 없습니다.');
+            }
+        }
+
+        let incrementButton = document.querySelector('#incrementButton');
+        incrementButton.addEventListener('click', incrementCount);
+    </script>
+</body>
+</html>
